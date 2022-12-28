@@ -1,0 +1,60 @@
+.ant-tabs-nav {
+    display: none !important;
+  }
+  input#form_item_path_user_data_email {
+    width: 36% !important;
+  }
+  input#form_item_path_user_data_password {
+    width: 36% !important;
+  }
+  .submitbutton {
+    width: 36%;
+    border-radius: 3px;
+    background-color: #ababab !important;
+  }
+  .textCenter {
+    text-align: center !important;
+  }
+  .mainlogindiv {
+    margin-top: 5% !important;
+  }
+  .h2margin {
+    margin-bottom: 35px !important;
+  }
+  .pbody {
+    font-size: 10px;
+    margin-left: 42px;
+    margin-top: 10px;
+  }
+  .mainLayout {
+    margin-left: 10% !important;
+  }
+  .btncss {
+    margin-left: -17px !important;
+  }
+  .btn1 {
+    border: 1px solid #878585;
+    border-radius: 76px;
+    height: 51px;
+    width: 225px;
+    color: #878585;
+    font-weight: 600;
+  }
+  .btncontainer{
+      margin-top: 5%;
+  }
+  .submitbutton2 {
+      width: 218px;
+      height: 30px;
+      border-radius: 5px;
+      background-color: #ababab !important;
+      font-weight: 600;
+    }
+    .submitdiv2{
+      margin-top: 12%;
+      margin-left: 30%;
+    }
+    :where(.css-dev-only-do-not-override-acm2ia).ant-checkbox-checked .ant-checkbox-inner {
+      background-color: #5600ff !important;
+      border-color: #5600ff !important;
+  }

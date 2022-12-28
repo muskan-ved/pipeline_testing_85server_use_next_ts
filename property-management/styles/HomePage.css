@@ -1,0 +1,65 @@
+/* .ant-tabs-nav {
+    display: none !important;
+  } */
+.contentdata {
+  text-align: center;
+  position: absolute !important;
+  top: 25% !important;
+  left: 38% !important;
+}
+.searchcss{
+  text-align: center;
+  position: absolute !important;
+  top: 53% !important;
+  left: 38% !important;
+  width: 25% !important;
+}
+h1.showData {
+font-size: 35px !important;
+}
+.buycss {
+  border: none !important;
+  font-weight: 700 !important;
+}
+.buycss:hover {
+  color: black !important;
+}
+.rentcss {
+  border: none !important;
+  font-weight: 700 !important;
+}
+.rentcss:hover {
+  color: black !important;
+}
+.searchbarr{
+  /* border-radius: 0px !important; */
+  /* border: 1px solid #ff6116 !important; */
+}
+.searchcss input.ant-input.css-dev-only-do-not-override-acm2ia {
+  border: 1px solid #ff6116 !important;
+}
+.searchcss button.ant-btn.css-dev-only-do-not-override-acm2ia.ant-btn-primary.ant-input-search-button {
+  background: #ff6116 !important;
+}
+.searchbarr :hover{
+  border-radius: 0px !important;
+  /* border: none !important; */
+}
+
+/* input.searchcss.ant-input.css-dev-only-do-not-override-acm2ia {
+  border-radius: 0px !important;
+  border-color: #ff6116 !important;
+
+}
+button.ant-btn.css-dev-only-do-not-override-acm2ia.ant-btn-primary.ant-input-search-button {
+  border-radius: 1px !important;
+}
+:where(.css-dev-only-do-not-override-acm2ia).searchcss .ant-btn-primary {
+  color: #fff;
+  background-color: #ff6116 !important;
+  box-shadow: 0 2px 0 rgb(5 145 255 / 10%);
+}
+:where(.css-dev-only-do-not-override-acm2ia).searchcss .ant-input-search .ant-input:hover,
+:where(.css-dev-only-do-not-override-acm2ia).searchcss .ant-input-search .ant-input:focus {
+  border-color: #ff6116 !important;
+} */
