@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import { Image, Card, Tabs, Space, Input, Button } from "antd";
 import bg from "../../../public/assets/bg.jpg";
 import { SearchOutlined } from "@ant-design/icons";
-
+const { Search } = Input;
 
 const onSearch = (value: string) => console.log(value);
-const TopContent = () => {
 
-  const [buyText,setBuyText]=useState(true);
+const TopContent = () => {
+  const [buyText, setBuyText] = useState(true);
 
   const onChange = (key: any) => {
     console.log(key);
-    if(key === "2"){
-      setBuyText(false)
-    }else{
-      setBuyText(true)
+    if (key === "2") {
+      setBuyText(false);
+    } else {
+      setBuyText(true);
     }
   };
-  
+
   return (
-    <>
+    <div className="topContentCls">
       <div
         style={{
           zIndex: -1,
@@ -30,41 +30,42 @@ const TopContent = () => {
       >
         <Image
           src={bg.src}
-          alt="Mountains with snow" 
+          alt="Mountains with snow"
           style={{
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             width: "100vw",
-            height: "100vh",
+            height: "80vh",
           }}
         />
       </div>
-   {
-    buyText?<h1
-    style={{
-      paddingTop: "10vh",
-      fontFamily: "system-ui",
-      fontSize: "2.5rem",
-      fontWeight: "bold",
-      textAlign: "center",
-    }}
-  >
-    Find Your Dream Home
-  </h1>:
-  <h1
-  style={{
-    paddingTop: "10vh",
-    fontFamily: "system-ui",
-    fontSize: "2.5rem",
-    fontWeight: "bold",
-    textAlign: "center",
-  }}
->
-  Explore Local Rentals
-</h1>
-   }
-      
+      {buyText ? (
+        <h1
+          style={{
+            paddingTop: "10vh",
+            fontFamily: "system-ui",
+            fontSize: "2.5rem",
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
+          Find Your Dream Home
+        </h1>
+      ) : (
+        <h1
+          style={{
+            paddingTop: "10vh",
+            fontFamily: "system-ui",
+            fontSize: "2.5rem",
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
+          Explore Local Rentals
+        </h1>
+      )}
+
       <div
         style={{
           fontFamily: "system-ui",
@@ -84,15 +85,14 @@ const TopContent = () => {
             },
             {
               label: `Rent`,
-              key: "2"
-            }
+              key: "2",
+            },
           ]}
         />
       </div>
 
       <div
         style={{
-
           fontFamily: "system-ui",
           fontSize: "2.5rem",
           fontWeight: "bold",
@@ -115,9 +115,8 @@ const TopContent = () => {
           </Button>
         </Input.Group>
       </div>
-    </>
+    </div>
   );
 };
-
 
 export default TopContent;
