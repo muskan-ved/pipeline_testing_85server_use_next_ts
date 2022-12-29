@@ -73,8 +73,9 @@ export default function App(props: IAppProps) {
             <h2 className="h2margin">Welcome to Propter</h2>
             <h3>Create an Account</h3>
           </div>
+          <div className="marginleftcss">
           <Form name="form_item_path" layout="vertical" onFinish={onFinish}>
-            <div style={{ marginLeft: "41% !important" }}>
+            <div>
               <MyFormItemGroup prefix={["user"]}>
                 <MyFormItemGroup prefix={["data"]}>
                   <div>
@@ -100,6 +101,7 @@ export default function App(props: IAppProps) {
               </p>
             </div>
           </Form>
+          </div>
         </TabPane>
         <TabPane tab="Tab 2" key="2">
           <Content className="mainLayout">

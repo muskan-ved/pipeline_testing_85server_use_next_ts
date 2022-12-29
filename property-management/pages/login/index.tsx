@@ -51,6 +51,9 @@ export default function App(props: IAppProps) {
 
     return <Form.Item name={concatName} {...props} />;
   };
+  const handleMove=()=>{
+    Router.push({ pathname: "/signUp" });
+  }
 
   return (
     <Layout className="mainlogindivsign">
@@ -83,7 +86,7 @@ export default function App(props: IAppProps) {
           <br />
           <div className="creatediv">
             <Text className="createcss">
-              <a href="/signUp">Create an Account</a>
+            <Button type="link" onClick={handleMove}>Create an Account</Button>
             </Text>
           </div>
           <div className="line"></div>
