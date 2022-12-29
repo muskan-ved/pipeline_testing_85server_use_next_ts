@@ -107,7 +107,7 @@ export default function App(props: IAppProps) {
                 Submit
               </Button>
               <p className="pbody">
-                By submitting, I accept Propter's term of service
+                By submitting, I accept Propter&apos;s term of service
               </p>
             </div>
           </Form>
