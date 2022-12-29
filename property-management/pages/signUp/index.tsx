@@ -75,7 +75,7 @@ export default function App(props: IAppProps) {
     console.log('handleAgent');
   }
   return (
-    <Layout className="mainlogindiv">
+    <div className="mainlogindiv">
       
       <Tabs defaultActiveKey="1" activeKey={activeKey} onChange={onKeyChange}>
         <TabPane tab="Tab 1" key="1" className="mainnnnn">
@@ -157,6 +157,6 @@ export default function App(props: IAppProps) {
           {/* <button onClick={() => onKeyChange("1")}>okkk</button> */}
         </TabPane>
       </Tabs>
-    </Layout>
+    </div>
   );
 }

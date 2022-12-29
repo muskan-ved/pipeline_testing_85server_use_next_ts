@@ -1,6 +1,6 @@
-.ant-tabs-nav {
+/* .ant-tabs-nav {
   display: none !important;
-}
+} */
 input#form_item_path_user_data_email {
   width: 36% !important;
 }
@@ -16,7 +16,8 @@ input#form_item_path_user_data_password {
   text-align: center !important;
 }
 .mainlogindivsign {
-  margin-top: 5% !important;
+  margin-top: 2% !important;
+  margin-bottom: 5% !important;
 }
 .h2marginsign {
   margin-bottom: 56px !important;

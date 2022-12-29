@@ -56,7 +56,7 @@ export default function App(props: IAppProps) {
   }
 
   return (
-    <Layout className="mainlogindivsign">
+    <div className="mainlogindivsign">
       <div className="textCentersign">
         <h2 className="h2marginsign">Welcome to Propter</h2>
         <h3>Sign In</h3>
@@ -106,6 +106,6 @@ export default function App(props: IAppProps) {
         </div>
       </Form>
       </div>
-    </Layout>
+    </div>
   );
 }
