@@ -1,6 +1,7 @@
 import '../styles/navbar.css'
 import "../styles/login.css";
 import "../styles/signup.css";
+import "../styles/globals.css";
 import "../styles/HomePage.css";
 import "../styles/landloard.css";
 import "../styles/broker.css";
