@@ -6,6 +6,7 @@ import { Checkbox } from "antd";
 import type { CheckboxChangeEvent } from "antd/es/checkbox";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import { Typography } from "antd";
+import Router, { withRouter } from "next/router";
 
 export interface IAppProps {}
 
@@ -64,6 +65,15 @@ export default function App(props: IAppProps) {
   const onCheckBox = (e: CheckboxChangeEvent) => {
     console.log(`checked = ${e.target.checked}`);
   };
+  const handleLandlord=()=>{
+    Router.push({ pathname: "/login" });
+  }
+  const handleBrokerage=()=>{
+    console.log('handleBrokerage');
+  }
+  const handleAgent=()=>{
+    console.log('handleAgent');
+  }
   return (
     <Layout className="mainlogindiv">
       
@@ -115,9 +125,9 @@ export default function App(props: IAppProps) {
             </Button>
             <Title level={5}>What best describes you?</Title>
             <div className="btncontainer">
-              <Button className="btn1" type="text">LandLord</Button>&emsp;&emsp;&emsp;&emsp;
-              <Button className="btn1" type="text">Brokerage</Button>&emsp;&emsp;&emsp;&emsp;
-              <Button className="btn1" type="text">RE Agent</Button>
+              <Button className="btn1" type="text" onClick={handleLandlord}>LandLord</Button>&emsp;&emsp;&emsp;&emsp;
+              <Button className="btn1" type="text" onClick={handleBrokerage}>Brokerage</Button>&emsp;&emsp;&emsp;&emsp;
+              <Button className="btn1" type="text" onClick={handleAgent}>RE Agent</Button>
             </div>
             <div className="submitdiv2">
             <Button onClick={() => onKeyChange("3")} className="submitbutton2" type="primary">Continue</Button>
