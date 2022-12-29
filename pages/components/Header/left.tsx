@@ -13,10 +13,10 @@ class LeftMenu extends Component {
           <a href="">Rent</a>
         </Menu.Item>
         <Menu.Item key="landloard">
-          <a href="">Landloard</a>
+          <a href="/landloard">Landloard</a>
         </Menu.Item>
         <Menu.Item key="brokerage">
-          <a href="">Brokerage</a>
+          <a href="/brokerage">Brokerage</a>
         </Menu.Item>
       </Menu>
     );

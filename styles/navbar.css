@@ -21,7 +21,7 @@
   align-content: center;
   margin: 0 auto;
   padding: 50px;
-}
+} 
 .ant-col .ant-card .ant-card-cover{
   height: 20vh;
 }
@@ -29,13 +29,14 @@
   color: orangered;
 }
 
-.gutter-row .ant-card{
+.propterRowCls .propertyColCls .mainCardCls{
   width: 240px;
   height: 65vh;
 }
 .ant-col .ant-card .ant-card-body .ant-card-meta .ant-card-meta-description{
   height: 25vh;
 }
+/* ================================================================ */
 .videoClass{
   margin-top: 10rem;
   margin-bottom: 5rem;
@@ -50,48 +51,86 @@
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-width: 80px;
-height: 80px;
+  width: 80px;
+  height: 80px;
+}
+
+/* .homeCls{
+background-image: url('/assets/bg1.webp');
+background-repeat: no-repeat;
+background-size: cover;
+width: 100vw;
+} */
+
+.topContentCls{
+  /* margin-top: 5%; */
+  background-image: url('/assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 70vh;
+  padding-top: 13%;
+  }
+  .propterHelpCls{
+    padding-top: 3%;
+  }
+  
+.aminitiesCls .aminitieRowcls1 .aminitieColCls .ant-card-cover .aminiteImgCls{
+    width: 35%;
+    transform: translate(50%, 0%);
+    margin-top: 13%;
+    margin-left: 13%;
+}
+.aminitiesCls .aminitieRowcls1 .aminitieColCls .ant-card-cover{
+  height: 10vh;
+}
+.aminitiesCls .aminitieColCls .aminitieCardCls{
+  width: 250px;
+  height: auto;
+margin-top: 20px;
+}
+
+.aminitiesCls .aminitieColCls .aminitiBtnCls{
+  top: -18px;
+    position: relative;
+    left: 43%
+}
+
+/* ========================================================= */
+
+.realStateCls{
+  margin-bottom: 40px;
+}
+.realStateRow{
+  margin-top: 7%;
+}
+.realStateCls .realStateRow .realStateColCls .realStateCardCls{
+  background-color: gray;
+  color: white;
+  height: 40vh;
+  width: 330px;
+  display: flex;
+  box-shadow: none;
+    border-radius: 5px;
 }
 
 
+.realStateCls .realStateRow .realStateColCls .realStateCardCls .firstCardBtn {
+  margin-top: 0px;
+  border: solid;
+  margin-left: 91px;
+  border-width: 2px 4px;
+  border-radius: 40px;
+  border-color: white;
+  font-size: 12px;
+}
+
+.realStateCls .realStateRow .realStateColCls .realStateCardCls .spanCls{
+  font-size: 10px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ------------------------------------------------------------- */
 
 
 

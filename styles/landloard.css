@@ -1,0 +1,44 @@
+.landloardMainContent{
+    background-image: url('/assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 70vh;
+  padding-top: 13%;
+  }
+  .landloardMainContent .mainContentBtn{
+    transform: translate(-50%, 0%);
+      margin-left: 50%;
+      margin-top: 5%;
+      width: 20%;
+      height: 8%;
+      border-radius: 0;
+      margin-bottom: 30px;
+      font-weight: bold;
+  }
+  
+
+ .landLoardHomeWorks .landloardTopContentRow  .landloardTopContentCard .ant-card-meta-title{
+    text-align: center;
+    font-size: 12px;
+ }
+
+ .landLoardHomeWorks .landloardTopContentRow  .landloardTopContentCard  .ant-card-meta-description{
+    font-size: 10px;
+ }
+
+ .premiumCls .premiumRowCls .premiumCardCls .premiumImgCls{
+    width: 25%;
+    transform: translate(50%, 50%);
+    margin-left: 50px;
+ }
+
+ .premiumCls .premiumRowCls .premiumCardCls .premiumMetaCls .ant-card-meta-title{
+    margin-bottom: 8px;
+    margin-top: 20%;
+    font-weight: 800;
+    text-align: center;
+ }
+ .premiumCls .premiumRowCls .premiumCardCls .premiumMetaCls .ant-card-meta-description{
+    margin-top: 15px;
+ }

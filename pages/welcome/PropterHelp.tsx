@@ -7,9 +7,41 @@ import vouchers from "/public/assets/vouchers.png";
 import { ArrowRightOutlined } from "@ant-design/icons";
 const { Meta } = Card;
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };
+
+const rowArray = [
+  {
+    Img: buyHome,
+    title: "Sell/Rent your property",
+    link: "for landloard",
+    description:
+      "with our words first video listing serviceWith the online text generator you can process your personal Lorem Ipsum enriching it with html elements that define its structure, with the possibility to insert external links, but not only.",
+  },
+  {
+    Img: rentHome,
+    title: "Sell/Rent your property",
+    link: "for landloard",
+    description:
+      "with our words first video listing serviceWith the online text generator you can process your personal Lorem Ipsum enriching it with html elements that define its structure, with the possibility to insert external links, but not only.",
+  },
+  {
+    Img: sellProperty,
+    title: "Sell/Rent your property",
+    link: "for landloard",
+    description:
+      "with our words first video listing serviceWith the online text generator you can process your personal Lorem Ipsum enriching it with html elements that define its structure, with the possibility to insert external links, but not only.",
+  },
+  {
+    Img: vouchers,
+    title: "Sell/Rent your property",
+    link: "for landloard",
+    description:
+      "with our words first video listing serviceWith the online text generator you can process your personal Lorem Ipsum enriching it with html elements that define its structure, with the possibility to insert external links, but not only.",
+  },
+];
+
 const PropterHelp = () => {
   return (
-    <div>
+    <div className="propterHelpCls">
       <h1
         style={{
           paddingTop: "10vh",
@@ -30,125 +62,34 @@ const PropterHelp = () => {
           maxWidth: "1088px",
           width: "100%",
         }}
+        className="propterRowCls"
       >
-        <Space>
-          <Col className="gutter-row" span={32}>
-            <Card
-              className="mainCardCls"
-              hoverable
-              style={{ width: 240 }}
-              cover={
-                <img
-                  className="homeImgCls"
-                  alt="example"
-                  src={sellProperty.src}
-                />
-              }
-            >
-              <Meta
-                title="Sell/Rent your property"
-                description="with our words first video listing serviceWith the online text generator you can process your personal Lorem Ipsum enriching it with html elements that define its structure, with the possibility to insert external links, but not only."
-              />
-              <a className="homeCardLink">For Landloard</a>
-              <ArrowRightOutlined
-                style={{
-                  color: "orangered",
-                  marginLeft: "50px",
-                  marginTop: "15px",
-                }}
-              />
-            </Card>
-          </Col>
-        </Space>
-        <Space>
-          <Col className="gutter-row" span={32}>
-            <Card
-              className="mainCardCls"
-              hoverable
-              style={{ width: 240 }}
-              cover={
-                <img
-                  className="homeImgCls"
-                  alt="example"
-                  src={buyHome.src}
-                  style={{
-                    color: "orangered",
-                    marginLeft: "50px",
-                    marginTop: "15px",
-                  }}
-                />
-              }
-            >
-              <Meta
-                title="Buy A Home"
-                description="with our words first video listing serviceWith the online text generator you can process your personal Lorem Ipsum enriching it with html elements that define its structure, with the possibility to insert external links, but not only."
-              />
-              <a className="homeCardLink">Find your home</a>
-              <ArrowRightOutlined
-                style={{
-                  color: "orangered",
-                  marginLeft: "50px",
-                  marginTop: "15px",
-                }}
-              />
-            </Card>
-          </Col>
-        </Space>
-        <Space>
-          <Col className="gutter-row" span={32}>
-            <Card
-              className="mainCardCls"
-              hoverable
-              style={{ width: 240 }}
-              cover={
-                <img
-                  className="homeImgCls"
-                  alt="example"
-                  src={rentHome.src}
-                  style={{
-                    color: "orangered",
-                    marginLeft: "50px",
-                    marginTop: "15px",
-                  }}
-                />
-              }
-            >
-              <Meta
-                title="Rent A Home"
-                description="with our words first video listing serviceWith the online text generator you can process your personal Lorem Ipsum enriching it with html elements that define its structure, with the possibility to insert external links, but not only."
-              />
-              <a className="homeCardLink">Rent a home</a>
-              <ArrowRightOutlined
-                style={{
-                  color: "orangered",
-                  marginLeft: "50px",
-                  marginTop: "15px",
-                }}
-              />
-            </Card>
-          </Col>
-        </Space>
-        <Space>
-          <Col className="gutter-row" span={32}>
-            <Card
-              className="mainCardCls"
-              hoverable
-              style={{ width: 240 }}
-              cover={
-                <img className="homeImgCls" alt="example" src={vouchers.src} />
-              }
-            >
-              <Meta
-                title="Vouchers"
-                description="with our words first video listing serviceWith the online text generator you can process your personal Lorem Ipsum enriching it with html elements that define its structure, with the possibility to insert external links, but not only."
-              />
-              <a className="homeCardLink">See list of vouchers</a>
-              <ArrowRightOutlined
-                style={{ color: "orangered", marginLeft: "50px" }}
-              />
-            </Card>
-          </Col>
-        </Space>
+        {rowArray.map((e) => {
+          return (
+            <Space>
+              <Col className="gutter-row propertyColCls" span={32}>
+                <Card
+                  className="mainCardCls"
+                  hoverable
+                  style={{ width: 240 }}
+                  cover={
+                    <img className="homeImgCls" alt="example" src={e.Img.src} />
+                  }
+                >
+                  <Meta title={e.title} description={e.description} />
+                  <a className="homeCardLink">{e.link}</a>
+                  <ArrowRightOutlined
+                    style={{
+                      color: "orangered",
+                      marginLeft: "50px",
+                      marginTop: "15px",
+                    }}
+                  />
+                </Card>
+              </Col>
+            </Space>
+          );
+        })}
       </Row>
     </div>
   );

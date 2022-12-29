@@ -6,7 +6,7 @@ const VideoContent = () => {
   return (
     <div className='videoClass'>
         <Button shape='circle' className='videoBtnCls' style={{backgroundColor:'white',margin:'0 auto'}}>
-            <CaretRightOutlined style={{color:'orangered'}}/>
+            <CaretRightOutlined style={{color:'orangered',fontSize:"35px"}}/>
         </Button>
     </div>
   )

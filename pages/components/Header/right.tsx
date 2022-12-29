@@ -20,7 +20,7 @@ const MenuItemGroup = Menu.ItemGroup;
           <a href="">Signup</a>
         </Menu.Item> */}
 
-        <Button style={{backgroundColor:'orangered',color:'white'}}onClick={handleLogin}>Login Or SignUp</Button>
+        <Button style={{backgroundColor:'orangered',color:'white'}} onClick={handleLogin}>Login Or SignUp</Button>
       </Menu>
         </div>
     );

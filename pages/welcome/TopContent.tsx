@@ -20,27 +20,8 @@ const TopContent = () => {
 
   return (
     <div className="topContentCls">
-      <div
-        style={{
-          zIndex: -1,
-          position: "fixed",
-          width: "100vw",
-          height: "100vh",
-        }}
-      >
-        <Image
-          src={bg.src}
-          alt="Mountains with snow"
-          style={{
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            width: "100vw",
-            height: "80vh",
-          }}
-        />
-      </div>
-      {buyText ? (
+     
+          {buyText ? (
         <h1
           style={{
             paddingTop: "10vh",
@@ -118,6 +99,7 @@ const TopContent = () => {
         </Input.Group>
       </div>
     </div>
+  
   );
 };
 
