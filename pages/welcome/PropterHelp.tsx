@@ -5,6 +5,7 @@ import rentHome from "/public/assets/rentHome.png";
 import sellProperty from "/public/assets/sellProperty.png";
 import vouchers from "/public/assets/vouchers.png";
 import { ArrowRightOutlined } from "@ant-design/icons";
+import Image from "next/image";
 const { Meta } = Card;
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };
 
@@ -64,8 +65,9 @@ const PropterHelp = () => {
         }}
         className="propterRowCls"
       >
-        {rowArray.map((e) => {
+        {rowArray.map((e,i) => {
           return (
+            <div key={i}>
             <Space>
               <Col className="gutter-row propertyColCls" span={32}>
                 <Card
@@ -73,9 +75,9 @@ const PropterHelp = () => {
                   hoverable
                   style={{ width: 240 }}
                   cover={
-                    <img className="homeImgCls" alt="example" src={e.Img.src} />
+                    <Image className="homeImgCls" alt="example" src={e.Img.src} width={240} height={100}/>
                   }
-                >
+                  >
                   <Meta title={e.title} description={e.description} />
                   <a className="homeCardLink">{e.link}</a>
                   <ArrowRightOutlined
@@ -84,10 +86,12 @@ const PropterHelp = () => {
                       marginLeft: "50px",
                       marginTop: "15px",
                     }}
-                  />
+                    />
                 </Card>
               </Col>
             </Space>
+                    </div>
+      
           );
         })}
       </Row>

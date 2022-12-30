@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu } from 'antd';
+import Link from 'next/link';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 class LeftMenu extends Component {
@@ -7,16 +8,16 @@ class LeftMenu extends Component {
     return (
    <Menu mode="horizontal">
        <Menu.Item key="buy">
-          <a href="">Buy</a>
+          <Link href="#">Buy</Link>
         </Menu.Item>
         <Menu.Item key="rent">
-          <a href="">Rent</a>
+          <Link href="#">Rent</Link>
         </Menu.Item>
         <Menu.Item key="landloard">
-          <a href="/landloard">Landloard</a>
+          <Link href="/landloard">Landloard</Link>
         </Menu.Item>
         <Menu.Item key="brokerage">
-          <a href="/brokerage">Brokerage</a>
+          <Link href="/brokerage">Brokerage</Link>
         </Menu.Item>
       </Menu>
     );

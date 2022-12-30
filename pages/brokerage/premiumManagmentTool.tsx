@@ -5,6 +5,7 @@ import rentHome from "/public/assets/rentHome.png";
 import sellProperty from "/public/assets/sellProperty.png";
 import vouchers from "/public/assets/vouchers.png";
 import { ArrowRightOutlined } from "@ant-design/icons";
+import Image from "next/image";
 // import Typography from "antd/es/typography/Typography";
 const { Meta } = Card;
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };
@@ -54,16 +55,18 @@ const PremiumManagmentTool = () => {
         className="premiumRowCls"
         justify='space-around'
       >
-        {rowArray.map((e) => {
+        {rowArray.map((e,i) => {
           return (
-            // <Space>
+            <div key={i}>
                 <Card
                   className="premiumCardCls"
                   hoverable
-                  style={{ width: 240 }}
+                  // style={{ width: 240 }}
                   cover={
-                    <img
-                      className="premiumImgCls"
+                    <Image
+                    className="premiumImgCls"
+                      width={240}
+                      height={100}
                       alt="example"
                       src={e.Img.src}
                     />
@@ -73,9 +76,9 @@ const PremiumManagmentTool = () => {
                     className="premiumMetaCls"
                     title={e.title}
                     description={e.description}
-                  />  
+                    />  
                 </Card>
-            // </Space>
+                </div>
           );
         })}
       </Row>

@@ -82,7 +82,7 @@ const FooterComp = () => {
               <List
                 header={
                   <>
-                    <Image src={logo.src} />
+                    <Image src={logo.src} alt="imagee" />
                     <h4 style={{ marginTop: "-30px", marginLeft: "65px" }}>
                       Propter
                     </h4>
