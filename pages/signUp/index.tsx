@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Avatar, Col, Layout, Row, Tabs } from "antd";
+import { Avatar, Col, Layout, Radio, Row, Tabs } from "antd";
 import { Form, Input, Button } from "antd";
 import type { FormItemProps } from "antd";
 import { Checkbox } from "antd";
@@ -1068,15 +1068,17 @@ const onFinish4=()=>{
             </Title>
 
             <div style={{ marginTop: "4%", display: "flex" }}>
-              <Checkbox onChange={onCheckBox} className="checkboxx" />
-              &emsp;
-              <h3 style={{ marginRight: "27%" }}>
-                {" "}
-                By ticking this checkbox, one agree&apos;s to Propter&apos;s
-                Terms of Privacy. I authorize Propter to contact us to facilate
-                the enrollment process in the partner program.
-              </h3>
+             
+              <h5 style={{ marginRight: "27%" }}>
+              Do you agree not to require preapproval until after the first tour*
+              </h5>
             </div>
+            <div className="radiomargin">
+            <Radio>Yes</Radio> &emsp;&emsp;&emsp; <Radio>No</Radio>
+            </div>
+              <h5 className="h5smallfont">
+             In order for our customers to have a pleasant experience when choosing a property, it is important that partner agent do no initiate the convervation in regard to finacing until after their first meeting with a Propter customer.
+              </h5>
             <div className="btnform7tab">
               <Button
                 type="primary"
