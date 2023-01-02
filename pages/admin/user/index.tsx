@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Sidebar from "../../sidebar";
 import { Divider, Layout, Menu, Modal, Popconfirm, Popover, Table, theme } from "antd";
 import Link from "next/link";
@@ -18,13 +18,23 @@ export default function UserListing() {
   const { Header, Sider, Content } = Layout;
   const onSearch = (value: string) => console.log(value);
   const { confirm } = Modal;
-
+  const [state, setstate] = useState<UserDataTypes | any>({ query: "", list: [] });
   const [userData, setUserData] = useState<UserDataTypes | any>('')
   const [allData, setAllData] = useState('');
-  const [NewData ,setNewData]=useState<UserDataTypes | any>('')
+  const [NewData, setNewData] = useState<UserDataTypes | any>('');
+  const [ActiveData, setActiveNewData] = useState<UserDataTypes | any>('')
+  const [inActiveData, setINactiveData] = useState<UserDataTypes | any>('')
+  const [Activedata, setActiveData] = useState<UserDataTypes | any>('')
+  const [tabClassName, setTabClassName] = useState<UserDataTypes | any>('')
+  const [tab1ClassName, setTab1ClassName] = useState<UserDataTypes | any>('')
+  const [tab2ClassName, setTab2ClassName] = useState<UserDataTypes | any>('')
+
+
+
+
   const handleDelete = () => {
     confirm({
-      title: 'Are you sure delete this User?',
+      title: 'Are you sure delete this user?',
       icon: <ExclamationCircleFilled />,
       content: '',
       okText: 'Yes',
@@ -41,9 +51,9 @@ export default function UserListing() {
 
   const content = (
     <div>
-      <p style={{ textAlign: "center", cursor: "pointer" }}><Link href={`/admin/editUser/${userData.id}`}><EditFilled style={{ color: "#4096ff" }} /></Link></p>
+      <p style={{ textAlign: "center", cursor: "pointer" }}><Link href={`/admin/user/edit/${userData.id}`}><EditFilled style={{ color: "#4096ff" }} /></Link></p>
       <p style={{ textAlign: "center", cursor: "pointer" }}> <DeleteOutlined style={{ color: "red" }} onClick={handleDelete} /></p>
-      <Link href={`/admin/viewUser/${userData.id}`}> <Button style={{ textAlign: "center" }} type="link">View</Button></Link>
+      <Link href={`/admin/user/view/${userData.id}`}> <Button style={{ textAlign: "center" }} type="link">View</Button></Link>
     </div>
   );
   const { Search } = Input;
@@ -270,7 +280,7 @@ export default function UserListing() {
         return (
           <>
             <Popover content={content} title="" trigger="click">
-              <MoreOutlined
+              &emsp;&nbsp;<MoreOutlined
                 onClick={() => handleClick(record)}
               />
             </Popover>
@@ -282,53 +292,169 @@ export default function UserListing() {
   const handleClick = (data: any) => {
     setUserData(data)
   }
-  const handleAlldata = () => {
-    if (allData === "1") {
-      setAllData("")
+  useEffect(() => {
+    let newdata = data.filter((ae) => {
+      return ae.status === "Inactive"
+    });
+    let newactivedata = data.filter((ae) => {
+      return ae.status === "Active"
+    });
+    setActiveNewData(newactivedata)
+    setNewData(newdata)
+  }, [])
+
+  const handleAlldata = (val: String) => {
+    if (val === 'all') {
+      if (allData === "1") {
+        setTabClassName('')
+        setTab1ClassName('')
+        setTab2ClassName('')
+
+      } else {
+        setAllData("1")
+        setTabClassName('active')
+        setTab1ClassName('')
+        setTab2ClassName('')
+      }
+
+    } else if (val === 'active') {
+      setAllData("2")
+      setActiveData(ActiveData)
+      setTab1ClassName('active')
+      setTabClassName("")
+      setTab2ClassName("")
+    } else if (val === 'inactive') {
+      setAllData("3")
+      setTab2ClassName('active')
+      setTabClassName('')
+      setTab1ClassName('')
+
+      setINactiveData(NewData)
     } else {
-      setAllData("1")
+      setAllData("")
     }
   }
-  const handleInactive =()=>{
-  let newdata= data.filter((ae)=>{
-    return ae.status==="Inactive"
-   })
-   setNewData(newdata)
-  }
+
+
+  const handleChange = (e: any) => {
+    
+    const identifier = (allData === '1' ? data : allData === '2' ? Activedata : allData === '3' ? inActiveData : [])
+    if (allData === '1') {
+      const results = identifier.filter((post: any) => {
+        var a, b;
+        if (e.target.value === "") return data;
+        a = post.name.toLowerCase().includes(e.target.value.toLowerCase());
+        b = post.email.toLowerCase().includes(e.target.value.toLowerCase());
+        return a || b;
+      });
+      setstate({
+        query: e.target.value,
+        data: results
+      });
+    } else if (allData === '2') {
+      const results = identifier.filter((post: any) => {
+        var a, b;
+        if (e.target.value === "") return data;
+        a = post.name.toLowerCase().includes(e.target.value.toLowerCase());
+        b = post.email.toLowerCase().includes(e.target.value.toLowerCase());
+        return a || b;
+      });
+      setstate({
+        query: e.target.value,
+        Activedata: results,
+
+      });
+    } else if (allData === '3') {
+      const results = identifier.filter((post: any) => {
+        var a, b;
+        if (e.target.value === "") return data;
+        a = post.name.toLowerCase().includes(e.target.value.toLowerCase());
+        b = post.email.toLowerCase().includes(e.target.value.toLowerCase());
+        return a || b;
+      });
+      setstate({
+        query: e.target.value,
+        inActiveData: results,
+
+      });
+    } else {
+      const results = data.filter((post: any) => {
+        var a, b;
+        if (e.target.value === "") return data;
+        a = post.name.toLowerCase().includes(e.target.value.toLowerCase());
+        b = post.email.toLowerCase().includes(e.target.value.toLowerCase());
+        return a || b;
+      });
+      setstate({
+        query: e.target.value,
+        data: results
+      });
+    }
+  };
+  // console.log(inActiveData, 'inActiveData', Activedata, allData);
   return (
     <Layout>
       <Sidebar />
       <Content className="contentcss">
         <div className="backflex">
-          {/* <Divider/> */}
           <div className="btndivsearch">
-            <Button onClick={handleAlldata} type="link">All({data.length})</Button>
-            <Button type="link" >Active(5)</Button>
-            <Button type="link" onClick={handleInactive}>inActive(5)</Button>
+            <Button onClick={() => handleAlldata('all')} type="link" className={tabClassName ? 'active' : ''}>All({data.length})</Button>
+            <Button type="link" onClick={() => handleAlldata('active')} className={tab1ClassName ? 'active' : ''}>Active({ActiveData?.length})</Button>
+            <Button type="link" onClick={() => handleAlldata('inactive')} className={tab2ClassName ? 'active' : ''}>Inactive({NewData?.length})</Button>
           </div>
           <div className="positioncss">
-            <Search placeholder="input search text" onSearch={onSearch} enterButton />
+            <Input
+              onChange={handleChange}
+              value={state.query}
+              type="search"
+              placeholder="Search..."
+            />
           </div>
           <div style={{ marginLeft: "50%" }}>
-            <Link href="/admin/addUser"><Button>Add User</Button></Link>
+            <Link href="/admin/user/add"><Button>Add User</Button></Link>
           </div>
         </div>
         <div className="mainuserdiv">
-          {
+          {state && state.data === undefined ?
+
             allData === "1" ?
+              //all data on active
               <Table
                 dataSource={data}
                 columns={columns}
                 pagination={{ pageSize: data.length, total: data.length, showSizeChanger: true }}
               />
               :
-              <Table
-                dataSource={data}
+              allData === "2" ? <Table
+                dataSource={Activedata}
                 columns={columns}
-                pagination={{ total: data.length, showSizeChanger: true }}
+                pagination={{ pageSize: 10, total: Activedata.length, showSizeChanger: true }}
+              /> : allData === "3" ? <Table
+                dataSource={inActiveData}
+                columns={columns}
+                pagination={{ pageSize: 10, total: inActiveData.length, showSizeChanger: true }}
+              /> :
+                //on page reload
+                <Table
+                  dataSource={data}
+                  columns={columns}
+                  pagination={{ total: data.length, showSizeChanger: true }}
+                />
+            :
+            allData === "1" || allData === "2" || allData === "3" ?
+              <Table
+                // dataSource={state&&state.data!==""?state.data:state.Activedata!==""?state.Activedata:state.inActiveData !==""?state.inActiveData:console.log('#$$$$$$$$$')}
+                dataSource={state.data}
+       
+                columns={columns}
+              />
+              :
+              <Table
+                dataSource={state.data}
+                columns={columns}
+
               />
           }
-
         </div>
       </Content>
     </Layout>
