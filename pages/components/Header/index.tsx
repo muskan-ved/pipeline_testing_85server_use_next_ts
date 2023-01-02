@@ -25,7 +25,7 @@ const Header: React.FC = () => {
     <>
       <nav className="menuBar">
         <div className="logo">
-          <Image src={logo.src}  preview={{ visible: false }}/>
+          <Image src={logo.src}  preview={{ visible: false }} alt="imageee"/>
           <a href="">Propter</a>
         </div>
         <div className="menuCon">

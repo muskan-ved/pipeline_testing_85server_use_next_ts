@@ -5,6 +5,7 @@ import rentHome from "/public/assets/rentHome.png";
 import sellProperty from "/public/assets/sellProperty.png";
 import vouchers from "/public/assets/vouchers.png";
 import { ArrowRightOutlined } from "@ant-design/icons";
+import Image from "next/image";
 const { Meta } = Card;
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };
 
@@ -45,32 +46,37 @@ const Aminities = () => {
         }}
         className="aminitieRowcls1"
       >
-        {rowArray.map((e) => {
+        {rowArray.map((e,i) => {
           return (
+            <div key={i}>
             <Space>
               <Col className="gutter-row  aminitieColCls" span={32}>
                 <Card
                   className="aminitieCardCls"
                   hoverable
-                  style={{ width: 240 }}
+                  // style={{ width: 240 }}
+                  
                   cover={
-                    <img
-                      className="aminiteImgCls"
-                      alt="example"
-                      src={e.Img.src}
+                    <Image
+                    className="aminiteImgCls"
+                    alt="example"
+                    src={e.Img.src}
+                    width= {240}
+                    height={100}
                     />
                   }
-                >
+                  >
                   <Meta
                     className="aminitieMetaCls"
                     title={e.title}
-                  />  
+                    />  
                 </Card>
                 <Button shape="circle" className="aminitiBtnCls">
                     <ArrowRightOutlined style={{ color: "black" }} />
                   </Button>
               </Col>
             </Space>
+                    </div>
           );
         })}
       </Row>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Row, Col, Card, Space } from "antd";
+import Image from "next/image";
 const { Meta } = Card;
 
 const HomeWorkComp = () => {
@@ -59,16 +60,18 @@ const HomeWorkComp = () => {
       </Typography>
 
       <Row justify="space-around" className="landloardTopContentRow">
-        {array.map((e) => {
+        {array.map((e,i) => {
           return (
+            <div key={i}>
             <Card
             className="landloardTopContentCard"
-              hoverable
-              style={{ width: 240 }}
-              cover={<img alt="example" src={e.img} />}
+            hoverable
+            // style={{ width: 240 }}
+            cover={<Image alt="example" src={e.img} width={240} height={100} />}
             >
               <Meta className="landloardTopContentMeta" title={e.title} description={e.description} />
             </Card>
+              </div>
           );
         })}
       </Row>
