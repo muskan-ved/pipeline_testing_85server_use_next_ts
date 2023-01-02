@@ -1,7 +1,8 @@
 import React from "react";
-import { Typography, Row, Col, Card, Space } from "antd";
-import Image from "next/image";
+import { Typography, Row, Col, Card, Space, Image } from "antd";
+// import Image from "next/image";
 const { Meta } = Card;
+const { Title } = Typography;
 
 const HomeWorkComp = () => {
   const array = [
@@ -9,7 +10,7 @@ const HomeWorkComp = () => {
       img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
       title: "property information",
       description:
-        "www.instagram. comwww.instagram .comwww.instagram.comwww.instagram.com",
+        "www.instagram. comwww.instagram .comwww.instagram.comwww.insta",
     },
     {
       img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
@@ -54,26 +55,44 @@ const HomeWorkComp = () => {
           textAlign: "center",
           fontFamily: "system-ui",
           fontSize: "1.5rem",
+          marginTop:'2%'
         }}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </Typography>
 
+
       <Row justify="space-around" className="landloardTopContentRow">
-        {array.map((e,i) => {
-          return (
-            <div key={i}>
+        {array?.map((e,i)=>{
+          return(
+            // <Col span={4}>
+           
             <Card
             className="landloardTopContentCard"
-            hoverable
-            // style={{ width: 240 }}
-            cover={<Image alt="example" src={e.img} width={240} height={100} />}
+              style={{ width: 300 }}
+              cover={
+                <Image
+                  alt="example"
+                  src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                  preview={false}
+                />
+              }
             >
-              <Meta className="landloardTopContentMeta" title={e.title} description={e.description} />
+            {/* <Meta className="landloardTopContentMeta" title={e.title} description={e.description} /> */}
+            <div>
+            <Title className="landloardTopContentTitle" level={5}>
+            {e.title}
+            </Title>
+            </div>
+           <div  className="landloardTopContentDescription">
+              {e.description}
+           </div>
             </Card>
-              </div>
-          );
+          // </Col>
+          )
         })}
+       
+       
       </Row>
     </div>
   );

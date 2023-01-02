@@ -1,11 +1,12 @@
 import React from "react";
-import { Col, Card, Row, Space, Button ,Typography} from "antd";
+import { Col, Card, Row, Space, Button ,Typography,Image} from "antd";
 import buyHome from "/public/assets/buyHome.png";
 import rentHome from "/public/assets/rentHome.png";
 import sellProperty from "/public/assets/sellProperty.png";
 import vouchers from "/public/assets/vouchers.png";
 import { ArrowRightOutlined } from "@ant-design/icons";
-import Image from "next/image";
+const { Title } = Typography;
+// import Image from "next/image";
 // import Typography from "antd/es/typography/Typography";
 const { Meta } = Card;
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };
@@ -42,7 +43,7 @@ const PrimiumTool = () => {
         we help showcase your property in the best possible way to attract buyers or tenant quickly
       </Typography>
 
-
+            
       <Row
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
         style={{
@@ -62,22 +63,29 @@ const PrimiumTool = () => {
                 <Card
                   className="premiumCardCls"
                   hoverable
-                  // style={{ width: 240 }}
-                  cover={
-                    <Image
-                    className="premiumImgCls"
-                    alt="example"
-                    width={240}
-                    height={100}
-                    src={e.Img.src}
-                    />
-                  }
+                  style={{ width: 240 }}
+                  
                 >
-                  <Meta
+                   <Image
+                       className="propertyImgCls"
+                        alt="example"
+                        src={e.Img.src}
+                        width={100}
+                        height={90}
+                        preview={false}
+                      />
+                    
+                  {/* <Meta
                     className="premiumMetaCls"
                     title={e.title}
                     description={e.description}
-                    />  
+                    />   */}
+                    <div>
+                      <Title className='premiumCardTitle' level={4}>{e.title}</Title>
+                    </div>
+                    <div className="premiumCardDescription">
+                      {e.description}
+                    </div>
                 </Card>
                     </div>
            
