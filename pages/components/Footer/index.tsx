@@ -106,47 +106,7 @@ const FooterComp = () => {
           </Row>
         </Header>
 
-        {/* <Header style={{ height: "auto" }}>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Space size={[8,6]} wrap>
-            <Col className="gutter-row" span={4}>
-              <div style={style}>col-4</div>
-            </Col>
-            </Space>
-         
-           
-            <Space size={[8,4]} wrap>
-            <Col className="gutter-row" span={4}>
-              <div style={style}>col-4</div>
-            </Col>
-            </Space>
-         
-            <Space size={[8,4]} wrap>
-            <Col className="gutter-row" span={4}>
-              <div style={style}>col-4</div>
-            </Col>
-            </Space>
-         
-            <Space size={[8,4]} wrap>
-            <Col className="gutter-row" span={4}>
-              <div style={style}>col-4</div>
-            </Col>
-            </Space>
-         
-            <Space size={[8,4]} wrap>
-            <Col className="gutter-row" span={4}>
-              <div style={style}>col-4</div>
-            </Col>
-            </Space>
-         
-            <Space size={[8,4]} wrap>
-            <Col className="gutter-row" span={4}>
-              <div style={style}>col-4</div>
-            </Col>
-            </Space>
-         
-          </Row>
-        </Header> */}
+        <Footer style={{ textAlign: 'left',backgroundColor:'#484242',color:'white' }}>©Propter2022 All rights reserved</Footer>
       </Layout>
     </>
   );
