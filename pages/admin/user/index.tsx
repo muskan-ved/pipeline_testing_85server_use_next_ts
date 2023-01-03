@@ -328,7 +328,6 @@ export default function UserListing() {
       setTab2ClassName('active')
       setTabClassName('')
       setTab1ClassName('')
-
       setINactiveData(NewData)
     } else {
       setAllData("")
@@ -337,9 +336,9 @@ export default function UserListing() {
 
 
   const handleChange = (e: any) => {
-    
     const identifier = (allData === '1' ? data : allData === '2' ? Activedata : allData === '3' ? inActiveData : [])
     if (allData === '1') {
+
       const results = identifier.filter((post: any) => {
         var a, b;
         if (e.target.value === "") return data;
@@ -391,7 +390,11 @@ export default function UserListing() {
       });
     }
   };
-  // console.log(inActiveData, 'inActiveData', Activedata, allData);
+
+  const searchAllData = state?.query !== "" ? state?.data : data
+  const searchActiveData = state?.query !== "" ? state?.Activedata : Activedata
+  const searchInActiveData = state?.query !== "" ? state?.inActiveData : inActiveData
+
   return (
     <Layout>
       <Sidebar />
@@ -415,45 +418,30 @@ export default function UserListing() {
           </div>
         </div>
         <div className="mainuserdiv">
-          {state && state.data === undefined ?
-
-            allData === "1" ?
+          {
+            allData === "1" && data !== null ?
               //all data on active
               <Table
-                dataSource={data}
+                dataSource={searchAllData}
                 columns={columns}
-                pagination={{ pageSize: data.length, total: data.length, showSizeChanger: true }}
+                pagination={{ pageSize: searchAllData?.length, total: searchAllData?.length, showSizeChanger: true }}
               />
               :
-              allData === "2" ? <Table
-                dataSource={Activedata}
+              allData === "2" && Activedata !== null ? <Table
+                dataSource={searchActiveData}
                 columns={columns}
-                pagination={{ pageSize: 10, total: Activedata.length, showSizeChanger: true }}
-              /> : allData === "3" ? <Table
-                dataSource={inActiveData}
+                pagination={{ pageSize: 10, total: searchActiveData?.length, showSizeChanger: true }}
+              /> : allData === "3" && inActiveData !== null ? <Table
+                dataSource={searchInActiveData}
                 columns={columns}
-                pagination={{ pageSize: 10, total: inActiveData.length, showSizeChanger: true }}
+                pagination={{ pageSize: 10, total: searchInActiveData?.length, showSizeChanger: true }}
               /> :
                 //on page reload
                 <Table
-                  dataSource={data}
+                  dataSource={searchAllData}
                   columns={columns}
-                  pagination={{ total: data.length, showSizeChanger: true }}
+                  pagination={{ pageSize: 10, total: searchAllData?.length, showSizeChanger: true }}
                 />
-            :
-            allData === "1" || allData === "2" || allData === "3" ?
-              <Table
-                // dataSource={state&&state.data!==""?state.data:state.Activedata!==""?state.Activedata:state.inActiveData !==""?state.inActiveData:console.log('#$$$$$$$$$')}
-                dataSource={state.data}
-       
-                columns={columns}
-              />
-              :
-              <Table
-                dataSource={state.data}
-                columns={columns}
-
-              />
           }
         </div>
       </Content>

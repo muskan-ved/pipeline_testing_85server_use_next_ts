@@ -30,8 +30,6 @@ export default function UserListing() {
   const [tab2ClassName, setTab2ClassName] = useState<UserDataTypes | any>('')
 
 
-
-
   const handleDelete = () => {
     confirm({
       title: 'Are you sure delete this landLord?',
@@ -64,7 +62,7 @@ export default function UserListing() {
       lastName: "Graham",
       email: "Sincere@april.com",
       phone: 9998887776,
-      noOfProperty:3,
+      noOfProperty: 3,
       status: "Active",
       address: "London Kulas Light Apt. 556",
       website: "https://tekolio.com/",
@@ -75,7 +73,7 @@ export default function UserListing() {
       lastName: "Howell",
       email: "Shanna@melissa.org",
       phone: 9998887776,
-      noOfProperty:6,
+      noOfProperty: 6,
       status: "Active",
       address: "New York Victor Plains Suite 879",
       website: "anastasia.net",
@@ -86,7 +84,7 @@ export default function UserListing() {
       lastName: "Bauch",
       email: "Nathan@yesenia.net",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Douglas Extension uitzipcod",
       website: "ramiro.info",
@@ -97,7 +95,7 @@ export default function UserListing() {
       lastName: "Lebsack",
       email: "Julianne.OConner@kory.org",
       phone: 9998887776,
-      noOfProperty:1,
+      noOfProperty: 1,
       status: "Active",
       address: "Hoeger Mal Apt. 692 South Elvis",
       website: "kale.biz",
@@ -108,7 +106,7 @@ export default function UserListing() {
       lastName: "Dietrich",
       email: "Lucio_Hettinger@annie.com",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Inactive",
       address: "Skiles ks Suit 51 Roscoevi",
       website: "demarco.info",
@@ -119,7 +117,7 @@ export default function UserListing() {
       lastName: "Schulist",
       email: "Karley_Dach@jasper.net",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Norberto Crossing",
       website: "ola.org",
@@ -130,7 +128,7 @@ export default function UserListing() {
       lastName: "Weissnat",
       email: "Telly.Hoeger@billy.com",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Rex Tra Suite 2 Howemouth",
       website: "elvis.io",
@@ -141,7 +139,7 @@ export default function UserListing() {
       lastName: "Runolfsdottir",
       email: "Sherwood@rosamond.net",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Ellsworth mit Sui 729 Aliyavi",
       website: "jacynthe.com",
@@ -152,7 +150,7 @@ export default function UserListing() {
       lastName: "Reichert",
       email: "Chaim_McDermott@dana.org",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Dayna Park uitzipcod",
       website: "conrad.com",
@@ -163,7 +161,7 @@ export default function UserListing() {
       lastName: "DuBuque",
       email: "Rey.Padberg@karina.com",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Kattie Turnpike Suite 198 Lebsackbury",
       website: "ambrose.net",
@@ -174,7 +172,7 @@ export default function UserListing() {
       lastName: "Graham",
       email: "Sincere@april.com",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "London Kulas Light Apt. 556",
       website: "https://tekolio.com/",
@@ -185,7 +183,7 @@ export default function UserListing() {
       lastName: "Howell",
       email: "Shanna@melissa.org",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "New York Victor Plains Suite 879",
       website: "anastasia.net",
@@ -196,7 +194,7 @@ export default function UserListing() {
       lastName: "Bauch",
       email: "Nathan@yesenia.net",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Douglas Extension uitzipcod",
       website: "ramiro.info",
@@ -207,7 +205,7 @@ export default function UserListing() {
       lastName: "Lebsack",
       email: "Julianne.OConner@kory.org",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Hoeger Mal Apt. 692 South Elvis",
       website: "kale.biz",
@@ -218,7 +216,7 @@ export default function UserListing() {
       lastName: "Dietrich",
       email: "Lucio_Hettinger@annie.com",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Inactive",
       address: "Skiles ks Suit 51 Roscoevi",
       website: "demarco.info",
@@ -229,7 +227,7 @@ export default function UserListing() {
       lastName: "Schulist",
       email: "Karley_Dach@jasper.net",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Norberto Crossing",
       website: "ola.org",
@@ -240,7 +238,7 @@ export default function UserListing() {
       lastName: "Weissnat",
       email: "Telly.Hoeger@billy.com",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Rex Tra Suite 2 Howemouth",
       website: "elvis.io",
@@ -251,7 +249,7 @@ export default function UserListing() {
       lastName: "Runolfsdottir",
       email: "Sherwood@rosamond.net",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Ellsworth mit Sui 729 Aliyavi",
       website: "jacynthe.com",
@@ -262,7 +260,7 @@ export default function UserListing() {
       lastName: "Reichert",
       email: "Chaim_McDermott@dana.org",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Dayna Park uitzipcod",
       website: "conrad.com",
@@ -273,7 +271,7 @@ export default function UserListing() {
       lastName: "DuBuque",
       email: "Rey.Padberg@karina.com",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Kattie Turnpike Suite 198 Lebsackbury",
       website: "ambrose.net",
@@ -284,7 +282,7 @@ export default function UserListing() {
       lastName: "Bauch",
       email: "Nathan@yesenia.net",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Douglas Extension uitzipcod",
       website: "ramiro.info",
@@ -295,7 +293,7 @@ export default function UserListing() {
       lastName: "Lebsack",
       email: "Julianne.OConner@kory.org",
       phone: 9998887776,
-      noOfProperty:2,
+      noOfProperty: 2,
       status: "Active",
       address: "Hoeger Mal Apt. 692 South Elvis",
       website: "kale.biz",
@@ -335,7 +333,7 @@ export default function UserListing() {
         return (
           <>
             <Popover content={content} title="" trigger="click">
-            &emsp;&nbsp;<MoreOutlined
+              &emsp;&nbsp;<MoreOutlined
                 onClick={() => handleClick(record)}
               />
             </Popover>
@@ -358,59 +356,105 @@ export default function UserListing() {
     setNewData(newdata)
   }, [])
 
-  const handleAlldata = () => {
+  const handleAlldata = (val: String) => {
+    if (val === 'all') {
+      if (allData === "1") {
+        setTabClassName('')
+        setTab1ClassName('')
+        setTab2ClassName('')
 
-    if (allData === "1") {
-      setAllData("")
+      } else {
+        setAllData("1")
+        setTabClassName('active')
+        setTab1ClassName('')
+        setTab2ClassName('')
+      }
+
+    } else if (val === 'active') {
+      setAllData("2")
+      setActiveData(ActiveData)
+      setTab1ClassName('active')
+      setTabClassName("")
+      setTab2ClassName("")
+    } else if (val === 'inactive') {
+      setAllData("3")
+      setTab2ClassName('active')
       setTabClassName('')
       setTab1ClassName('')
-      setTab2ClassName('')
-
+      setINactiveData(NewData)
     } else {
-      setAllData("1")
-      setTabClassName('active')
-      setTab1ClassName('')
-      setTab2ClassName('')
+      setAllData("")
     }
   }
-  const handleInactive = () => {
-    console.log('$$$$$$$$$$$$');
-    setTab2ClassName('active')
-    setTabClassName('')
-    setTab1ClassName('')
-
-    setINactiveData(NewData)
-  }
-  const handleActive = () => {
-    console.log('$$$$$$$$$$$$');
-    setActiveData(ActiveData)
-    setTab1ClassName('active')
-    setTabClassName("")
-    setTab2ClassName("")
-  }
-
   const handleChange = (e: any) => {
-    const results = data.filter((post) => {
-      var a, b;
-      if (e.target.value === "") return data;
-      a = post.firstName.toLowerCase().includes(e.target.value.toLowerCase());
-      b = post.lastName.toLowerCase().includes(e.target.value.toLowerCase());
-      return a || b;
-    });
-    setstate({
-      query: e.target.value,
-      data: results
-    });
+    const identifier = (allData === '1' ? data : allData === '2' ? Activedata : allData === '3' ? inActiveData : [])
+    if (allData === '1') {
+
+      const results = identifier.filter((post: any) => {
+        var a, b;
+        if (e.target.value === "") return data;
+        a = post.firstName.toLowerCase().includes(e.target.value.toLowerCase());
+        b = post.lastName.toLowerCase().includes(e.target.value.toLowerCase());
+        return a || b;
+      });
+      setstate({
+        query: e.target.value,
+        data: results
+      });
+    } else if (allData === '2') {
+      const results = identifier.filter((post: any) => {
+        var a, b;
+        if (e.target.value === "") return data;
+        a = post.firstName.toLowerCase().includes(e.target.value.toLowerCase());
+        b = post.lastName.toLowerCase().includes(e.target.value.toLowerCase());
+        return a || b;
+      });
+      setstate({
+        query: e.target.value,
+        Activedata: results,
+
+      });
+    } else if (allData === '3') {
+      const results = identifier.filter((post: any) => {
+        var a, b;
+        if (e.target.value === "") return data;
+        a = post.firstName.toLowerCase().includes(e.target.value.toLowerCase());
+        b = post.lastName.toLowerCase().includes(e.target.value.toLowerCase());
+        return a || b;
+      });
+      setstate({
+        query: e.target.value,
+        inActiveData: results,
+
+      });
+    } else {
+      const results = data.filter((post: any) => {
+        var a, b;
+        if (e.target.value === "") return data;
+        a = post.firstName.toLowerCase().includes(e.target.value.toLowerCase());
+        b = post.lastName.toLowerCase().includes(e.target.value.toLowerCase());
+        return a || b;
+      });
+      setstate({
+        query: e.target.value,
+        data: results
+      });
+    }
   };
+
+  const searchAllData = state?.query !== "" ? state?.data : data
+  const searchActiveData = state?.query !== "" ? state?.Activedata : Activedata
+  const searchInActiveData = state?.query !== "" ? state?.inActiveData : inActiveData
+
   return (
     <Layout>
       <Sidebar />
       <Content className="contentcss">
         <div className="backflex">
           <div className="btndivsearch">
-            <Button onClick={handleAlldata} type="link" className={tabClassName ? 'active' : ''}>All({data.length})</Button>
-            <Button type="link" onClick={handleActive} className={tab1ClassName ? 'active' : ''}>Active({ActiveData?.length})</Button>
-            <Button type="link" onClick={handleInactive} className={tab2ClassName ? 'active' : ''}>Inactive({NewData?.length})</Button>
+            <Button onClick={() => handleAlldata('all')} type="link" className={tabClassName ? 'active' : ''}>All({data.length})</Button>
+            <Button type="link" onClick={() => handleAlldata('active')} className={tab1ClassName ? 'active' : ''}>Active({ActiveData?.length})</Button>
+            <Button type="link" onClick={() => handleAlldata('inactive')} className={tab2ClassName ? 'active' : ''}>Inactive({NewData?.length})</Button>
           </div>
           <div className="positioncss">
             <Input
@@ -425,34 +469,30 @@ export default function UserListing() {
           </div>
         </div>
         <div className="mainuserdiv">
-
-          {state && state.data === undefined ?
-            (
-              allData === "1" ?
-                <Table
-                  dataSource={data}
-                  columns={columns}
-                  pagination={{ pageSize: data.length, total: data.length, showSizeChanger: true }}
-                />
-                :
-                <Table
-                  dataSource={data}
-                  columns={columns}
-                  pagination={{ total: data.length, showSizeChanger: true }}
-                />
-            ) :
-            allData === "1" ?
+          {
+            allData === "1" && data !== null ?
+              //all data on active
               <Table
-                dataSource={state.data}
+                dataSource={searchAllData}
                 columns={columns}
-              // pagination={{ pageSize: state.data.length, total: state.data.length, showSizeChanger: true }}
+                pagination={{ pageSize: searchAllData?.length, total: searchAllData?.length, showSizeChanger: true }}
               />
               :
-              <Table
-                dataSource={state.data}
+              allData === "2" && Activedata !== null ? <Table
+                dataSource={searchActiveData}
                 columns={columns}
-              // pagination={{ total: state.data, showSizeChanger: true }}
-              />
+                pagination={{ pageSize: 10, total: searchActiveData?.length, showSizeChanger: true }}
+              /> : allData === "3" && inActiveData !== null ? <Table
+                dataSource={searchInActiveData}
+                columns={columns}
+                pagination={{ pageSize: 10, total: searchInActiveData?.length, showSizeChanger: true }}
+              /> :
+                //on page reload
+                <Table
+                  dataSource={searchAllData}
+                  columns={columns}
+                  pagination={{ pageSize: 10, total: searchAllData?.length, showSizeChanger: true }}
+                />
           }
         </div>
       </Content>
