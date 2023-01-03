@@ -94,9 +94,9 @@ const FavoriteComp = () => {
             lg={{ span: 4, offset: 2 }}
             md={{ span: 12, offset: 2 }}
           >
-            {rorData.map((e) => {
+            {rorData.map((e,index) => {
               return (
-                <Row style={{ marginTop: "15px" }}>
+                <Row key={index} style={{ marginTop: "15px" }}>
                   <Col span={12} style={{ fontWeight: "bold", color: "black" }}>
                     {" "}
                     {e.key}{" "}
@@ -180,9 +180,9 @@ const FavoriteComp = () => {
             lg={{ span: 4, offset: 2 }}
             md={{ span: 12, offset: 2 }}
           >
-            {rorData.map((e) => {
+            {rorData.map((e,index) => {
               return (
-                <Row style={{ marginTop: "15px" }}>
+                <Row key={index} style={{ marginTop: "15px" }}>
                   <Col span={12} style={{ fontWeight: "bold", color: "black" }}>
                     {" "}
                     {e.key}{" "}
@@ -267,9 +267,9 @@ const FavoriteComp = () => {
             lg={{ span: 4, offset: 2 }}
             md={{ span: 12, offset: 2 }}
           >
-            {rorData.map((e) => {
+            {rorData.map((e,index) => {
               return (
-                <Row style={{ marginTop: "15px" }}>
+                <Row key={index} style={{ marginTop: "15px" }}>
                   <Col span={12} style={{ fontWeight: "bold", color: "black" }}>
                     {" "}
                     {e.key}{" "}

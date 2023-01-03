@@ -297,7 +297,7 @@ export default function UserListing() {
     });
     setActiveNewData(newactivedata)
     setNewData(newdata)
-  },[])
+  },[data])
 
   const handleAlldata = (val: String) => {
     if (val === 'all') {
