@@ -22,21 +22,24 @@ jobs:
         id: detect-package-manager
         run: |
          npm install
+      - name: Build
+        run: |
          npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./out
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          path: ./out  
+ 
+      - name: deploy file to server
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+            username: ${{ secrets.FTP_USERNAME }}
+            server: ${{ secrets.FTP_SERVER }}
+            ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+            port: ${{ secrets.FTP_PORT }}
+            sftp_only: true
+            password: ${{ secrets.FTP_PASSWORD }}
+            local_path: './build/*'
+            remote_path: '/var/www/html/property'
+            sftpArgs: '-o ConnectTimeout=5'
