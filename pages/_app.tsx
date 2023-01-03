@@ -13,16 +13,32 @@ import '../styles/myProfile.css'
 import type { AppProps } from 'next/app';
 import Header from './components/Header';
 import FooterComp from './components/Footer';
-// import Welcome from './Welcome';
+import { useEffect, useState } from 'react';
+import Loader from './common/loader'
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const [loading, setLoading] = useState(true);
 
-  return(
+  useEffect(() => {
+    router.events.on('routeChangeStart', (url) => {
+      setLoading(false);
+    });
+    router.events.on('routeChangeComplete', (url) => {
+      setLoading(true);
+    });
+  })
+
+  return (
     <>
-     <Header/>
-     <Component {...pageProps} />
-     {/* <Welcome/> */}
-     <FooterComp/>
-     </>
-     )
+      {
+        loading ? (
+          <>
+            <Header />
+            <Component {...pageProps} />
+            <FooterComp />
+          </>) : <Loader />}
+    </>
+  )
 }

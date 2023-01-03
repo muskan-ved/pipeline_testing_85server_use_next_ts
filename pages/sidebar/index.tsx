@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { AppstoreOutlined, MailOutlined, UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
+import { AlignCenterOutlined, AppstoreOutlined, DashboardOutlined, FontColorsOutlined, IdcardOutlined, MailOutlined, UploadOutlined, UsergroupAddOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -12,23 +12,11 @@ const Sidebar: React.FC = () => {
         token: { colorBgContainer },
     } = theme.useToken();
     let location = useRouter();
-    const [current, setCurrent] = useState(
-        location.pathname === "/" || location.pathname === ""
-            ? "/dashboard"
-            : location.pathname,
-    );
-    //or simply use const [current, setCurrent] = useState(location.pathname)        
+    const [current, setCurrent] = useState(location.pathname);
 
-    useEffect(() => {
-        if (location) {
-            if (current !== location.pathname) {
-                setCurrent(location.pathname);
-            }
-        }
-    }, [location, current]);
 
     function handleClick(e: any) {
-        setCurrent(e.key);
+        location.push(e.key)
     }
 
     return (
@@ -44,39 +32,32 @@ const Sidebar: React.FC = () => {
         >
             <div className="logo" />
             <div className='slidercss'>
-
-            <Menu
-                onClick={handleClick}
-                mode="vertical"
-                selectedKeys={[current]}
+                <Menu
+                    onClick={(e) => handleClick(e)}
+                    mode="vertical"
+                    selectedKeys={[current]}
                 >
-                <Link href="/admin/dashboard">
-                    <Menu.Item key="1" icon={<UserOutlined />}>
+                    <Menu.Item key="/admin/dashboard" icon={<DashboardOutlined />}>
                         Dashboard
                     </Menu.Item>
-                </Link>
-                <Link href="/admin/userListing">
-                    <Menu.Item key="2" icon={<UserOutlined />}>
+
+                    <Menu.Item key="/admin/user" icon={<UsergroupAddOutlined />}>
                         User Listing
                     </Menu.Item>
-                </Link>
-                <Link href="/admin/brokerage">
-                    <Menu.Item key="3" icon={<UploadOutlined />}>
+
+                    <Menu.Item key="/admin/brokerage" icon={<AlignCenterOutlined />}>
                         Brokerage Listing
                     </Menu.Item>
-                </Link>
-                <Link href="#">
-                    <Menu.Item key="4" icon={<VideoCameraOutlined />}>
+
+                    <Menu.Item key="#" icon={<FontColorsOutlined />}>
                         Agent Listing
                     </Menu.Item>
-                </Link>
-                <Link href="#">
-                    <Menu.Item key="5" icon={<UserOutlined />}>
+
+                    <Menu.Item key="/admin/landlord" icon={<IdcardOutlined />}>
                         Landlord Listing
                     </Menu.Item>
-                </Link>
-            </Menu>
-                </div>
+                </Menu>
+            </div>
         </Sider>
     );
 };
