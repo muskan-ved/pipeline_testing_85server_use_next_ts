@@ -7,6 +7,8 @@ import "../styles/landloard.css";
 import "../styles/broker.css";
 import "../styles/adminSide.css";
 import '../styles/users.css'
+import '../styles/myProfile.css'
+
 
 import type { AppProps } from 'next/app';
 import Header from './components/Header';

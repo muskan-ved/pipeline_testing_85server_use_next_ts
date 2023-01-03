@@ -13,16 +13,11 @@ class userService  {
   }
 
 
-  updateprofile({id, data, token}:values) {
-    return http.put(`api/user/${id}`, data, {
-      headers: {
-        'Authorization': `Bearer ${token}`
-      },
-
-    })
+  updateprofile(id:number, data:any) {
+    return http.put(`api/user/${id}`, data)
   }
 
- 
+
 }
 
 export default new userService();
