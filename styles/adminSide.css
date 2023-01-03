@@ -90,11 +90,15 @@ aside.ant-layout-sider.ant-layout-sider-dark {
   margin-top: 50px;
 }
 button.ant-btn.css-dev-only-do-not-override-acm2ia.ant-btn-link.active {
-  /* background-color: lightgrey !important; */
   border-bottom: 1px solid orangered !important;
   border-radius: 0px !important;
   color: orangered;
   ;
+}
+:where(.css-acm2ia).ant-btn-link.active {
+  border-bottom: 1px solid orangered !important;
+  border-radius: 0px !important;
+  color: orangered;
 }
 .lanlordmain {
   padding: 20px;
@@ -153,4 +157,10 @@ button.ant-btn.css-dev-only-do-not-override-acm2ia.ant-btn-link.active {
   margin-top: 8px;
   font-size: 24px;
   text-decoration: underline;
+}
+.loadingcss {
+  margin: 0 auto !important;
+  margin-top: 15% !important;
+  margin-left: 50% !important;
+  margin-bottom: 15% !important;
 }

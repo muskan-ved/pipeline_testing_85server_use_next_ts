@@ -29,9 +29,6 @@ export default function UserListing() {
   const [tab1ClassName, setTab1ClassName] = useState<UserDataTypes | any>('')
   const [tab2ClassName, setTab2ClassName] = useState<UserDataTypes | any>('')
 
-
-
-
   const handleDelete = () => {
     confirm({
       title: 'Are you sure delete this user?',
@@ -148,7 +145,7 @@ export default function UserListing() {
       phone: 9924 - 648 - 38994,
       website: "ambrose.net",
     }, {
-      id: 2,
+      id: 12,
       name: "Ervin Howell",
       email: "Shanna@melissa.org",
       status: "Active",
@@ -157,7 +154,7 @@ export default function UserListing() {
       website: "anastasia.net",
     },
     {
-      id: 3,
+      id: 13,
       name: "Clementine Bauch",
       email: "Nathan@yesenia.net",
       status: "Active",
@@ -166,7 +163,7 @@ export default function UserListing() {
       website: "ramiro.info",
     },
     {
-      id: 4,
+      id: 14,
       name: "Patricia Lebsack",
       email: "Julianne.OConner@kory.org",
       status: "Active",
@@ -175,7 +172,7 @@ export default function UserListing() {
       website: "kale.biz",
     },
     {
-      id: 5,
+      id: 15,
       name: "Chelsey Dietrich",
       email: "Lucio_Hettinger@annie.com",
       status: "Active",
@@ -184,7 +181,7 @@ export default function UserListing() {
       website: "demarco.info",
     },
     {
-      id: 6,
+      id: 16,
       name: "Mrs. Dennis Schulist",
       email: "Karley_Dach@jasper.net",
       status: "Active",
@@ -193,7 +190,7 @@ export default function UserListing() {
       website: "ola.org",
     },
     {
-      id: 7,
+      id: 17,
       name: "Kurtis Weissnat",
       email: "Telly.Hoeger@billy.com",
       status: "Active",
@@ -202,7 +199,7 @@ export default function UserListing() {
       website: "elvis.io",
     },
     {
-      id: 8,
+      id: 18,
       name: "Nicholas Runolfsdottir V",
       email: "Sherwood@rosamond.net",
       status: "Active",
@@ -211,7 +208,7 @@ export default function UserListing() {
       website: "jacynthe.com",
     },
     {
-      id: 9,
+      id: 19,
       name: "Glenna Reichert",
       email: "Chaim_McDermott@dana.org",
       status: "Active",
@@ -220,7 +217,7 @@ export default function UserListing() {
       website: "conrad.com",
     },
     {
-      id: 10,
+      id: 20,
       name: "Clementina DuBuque",
       email: "Rey.Padberg@karina.com",
       status: "Active",
@@ -229,7 +226,7 @@ export default function UserListing() {
       website: "ambrose.net",
     },
     {
-      id: 1,
+      id: 21,
       name: "Leanne Graham",
       email: "Sincere@april.com",
       status: "Active",
@@ -238,7 +235,7 @@ export default function UserListing() {
       website: "https://tekolio.com/",
     },
     {
-      id: 2,
+      id: 22,
       name: "Ervin Howell",
       email: "Shanna@melissa.org",
       status: "Active",
@@ -247,7 +244,7 @@ export default function UserListing() {
       website: "anastasia.net",
     },
     {
-      id: 3,
+      id: 23,
       name: "Clementine Bauch",
       email: "Nathan@yesenia.net",
       status: "Active",
@@ -301,7 +298,7 @@ export default function UserListing() {
     });
     setActiveNewData(newactivedata)
     setNewData(newdata)
-  }, [])
+  },[])
 
   const handleAlldata = (val: String) => {
     if (val === 'all') {
