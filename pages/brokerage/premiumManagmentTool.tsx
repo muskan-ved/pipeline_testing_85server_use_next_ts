@@ -1,18 +1,20 @@
 import React from "react";
-import { Col, Card, Row, Space, Button ,Typography} from "antd";
+import { Col, Card, Row, Space, Button ,Typography,Image  } from "antd";
 import buyHome from "/public/assets/buyHome.png";
 import rentHome from "/public/assets/rentHome.png";
 import sellProperty from "/public/assets/sellProperty.png";
 import vouchers from "/public/assets/vouchers.png";
 import { ArrowRightOutlined } from "@ant-design/icons";
-import Image from "next/image";
+// import Image from "next/image";
+const { Title } = Typography;
+
 // import Typography from "antd/es/typography/Typography";
 const { Meta } = Card;
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };
 
 const rowArray = [
-  { Img:buyHome, title: "parking space" ,description:"parking spaceparking spaceparking spaceparking spaceparking space"},
-  { Img:rentHome, title: "parking space" ,description:"parking spaceparking spaceparking spaceparking spaceparking space"},
+  { Img:buyHome, title: "parking space" ,description:"  Our premium managemnet tool"},
+  { Img:rentHome, title: "parking space" ,description:"  Our premium managemnet toolarking space"},
   { Img:sellProperty, title: "parking space" ,description:"parking spaceparking spaceparking spaceparking spaceparking space"},
   { Img:buyHome, title: "parking space" ,description:"parking spaceparking spaceparking spaceparking spaceparking space"},
   
@@ -62,21 +64,28 @@ const PremiumManagmentTool = () => {
                   className="premiumCardCls"
                   hoverable
                   // style={{ width: 240 }}
-                  cover={
-                    <Image
-                    className="premiumImgCls"
-                      width={240}
-                      height={100}
-                      alt="example"
-                      src={e.Img.src}
-                    />
-                  }
+                  
                 >
-                  <Meta
+                  <Image
+                       className="premiumManagementImgCls"
+                        alt="example"
+                        src={e.Img.src}
+                        width={100}
+                        height={90}
+                        preview={false}
+                      />
+                    
+                  {/* <Meta
                     className="premiumMetaCls"
                     title={e.title}
                     description={e.description}
-                    />  
+                    />   */}
+                    <div>
+                      <Title className='premiumManagmentCardTitle' level={4}>{e.title}</Title>
+                    </div>
+                    <div className="premiumManagementCardDescription">
+                      {e.description}
+                    </div>
                 </Card>
                 </div>
           );

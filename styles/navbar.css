@@ -14,8 +14,23 @@
 .tab-setting .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-ink-bar-animated{
   background: black;
 }
+/* ============================================================= */
+.propterHelpCls .propterRowCls .propertyColCls .propertyImgCls{
+  padding: 35px 45px;
+}
 
-.ant-col .ant-card .ant-card-cover .homeImgCls {
+.propterHelpCls .propterRowCls .propertyColCls .homeCardLink{
+  color: orangered;
+}
+.propterHelpCls .propterRowCls {
+  margin-top: 5%;
+}
+
+/* .propterHelpCls{
+  padding-top: 3%;
+} */
+
+/* .ant-col .ant-card .ant-card-cover .homeImgCls {
   width: 90px;
   height: 80px;
   align-content: center;
@@ -35,7 +50,7 @@
 }
 .ant-col .ant-card .ant-card-body .ant-card-meta .ant-card-meta-description{
   height: 25vh;
-}
+} */
 /* ================================================================ */
 .videoClass{
   margin-top: 10rem;
@@ -55,15 +70,8 @@
   height: 80px;
 }
 
-/* .homeCls{
-background-image: url('/assets/bg1.webp');
-background-repeat: no-repeat;
-background-size: cover;
-width: 100vw;
-} */
 
 .topContentCls{
-  /* margin-top: 5%; */
   background-image: url('/assets/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -71,11 +79,25 @@ width: 100vw;
   height: 70vh;
   padding-top: 13%;
   }
-  .propterHelpCls{
-    padding-top: 3%;
+
+  /* ============================================================================= */
+
+  .aminitiesCls .aminitieColCls .aminitiBtnCls{
+    top: -18px;
+      position: relative;
+      left: 43%
   }
-  
-.aminitiesCls .aminitieRowcls1 .aminitieColCls .ant-card-cover .aminiteImgCls{
+  .aminitiesCls .aminitieRowcls1 .aminitieColCls .aminiteImgCls{
+  padding: 10px 30px;
+}
+.aminitiesCls .aminitieRowcls1{
+  margin-top: 5%;
+}
+.aminitiesCls .aminitieRowcls1 .aminitieColCls .aminitieMetaCls{
+  text-align: center;
+}
+
+/* .aminitiesCls .aminitieRowcls1 .aminitieColCls .ant-card-cover .aminiteImgCls{
     width: 35%;
     transform: translate(50%, 0%);
     margin-top: 13%;
@@ -94,7 +116,7 @@ margin-top: 20px;
   top: -18px;
     position: relative;
     left: 43%
-}
+} */
 
 /* ========================================================= */
 
@@ -130,7 +152,7 @@ margin-top: 20px;
 }
 
 
-/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- -------------------------------------------*/
 
 
 
