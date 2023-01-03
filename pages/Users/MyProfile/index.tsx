@@ -166,7 +166,7 @@ const MyProfile = () => {
               size={250}
               // icon={<UserOutlined />}
               src={dataObj?.profilPic}
-              style={{ cursor: "pointer" }}
+            
             />
             {/* <input
               type="file"

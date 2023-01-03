@@ -23,7 +23,12 @@ const UserProfile = () => {
   const [dataObj, setDataObj] = useState<userType | any>({});
   const [isShow, setIsShow] = useState(false);
 
-  const [nameErr, setNameErr] = useState(false);
+  const [fnameErr, setFNameErr] = useState(false);
+  const [lnameErr, setLNameErr] = useState(false);
+  const [phoneErr, setPhoneErr] = useState(false);
+  const [emailErr, setEmailErr] = useState(false);
+  const [genderErr, setGenderErr] = useState(false);
+
   const { id } = router.query;
 
   useEffect(() => {
@@ -39,6 +44,8 @@ const UserProfile = () => {
         setIsShow(false);
         setFirstName(data?.data?.firstName);
         setLastName(data?.data?.lastName);
+        setPhone(data?.data?.phone)
+        setEmail(data?.data?.email)
         setGender(data?.data?.gender);
         setProfilePic(data?.data?.profilPic);
       }
@@ -72,8 +79,21 @@ const UserProfile = () => {
 
   const updatepRofileFn = async () => {
     if (!firstName) {
-      setNameErr(true);
+      setFNameErr(true);
     }
+    if (!lastName) {
+      setLNameErr(true);
+    }
+    if (!phone) {
+      setPhoneErr(true);
+    }
+    if (!email) {
+      setEmailErr(true);
+    }
+    if (!gender) {
+      setGenderErr(true);
+    }
+
     const id: number = 1;
     const data = {
       firstName: firstName,
@@ -82,12 +102,12 @@ const UserProfile = () => {
       gender: gender,
       profilPic: profilPic,
       email: email,
-      reraNumber: reraNumber,
     };
 
     userService.updateprofile(id, data).then((data) => {
       console.log(data);
-      if (!firstName) {
+      if (!firstName || !lastName || !phone || !gender || !email) {
+        console.log(firstName,';;',lastName,';;',phone,';;;',email,';;',gender,'ccc')
         toast.error("please fill all fields", {
           position: "top-right",
           autoClose: 5000,
@@ -98,7 +118,7 @@ const UserProfile = () => {
           progress: undefined,
           theme: "light",
         });
-      } else if (data.status === 200) {
+      } else  {
         toast.success("success", {
           position: "top-right",
           autoClose: 5000,
@@ -109,7 +129,7 @@ const UserProfile = () => {
           progress: undefined,
           theme: "light",
         });
-        router.push('/Users/MyProfile')
+        router.push("/Users/MyProfile");
       }
     });
   };
@@ -184,7 +204,15 @@ const UserProfile = () => {
                           onChange={(e) => {
                             setFirstName(e.target.value);
                           }}
+                          onKeyUp={() => { setFNameErr(false); }}
                         />
+                        {fnameErr ? (
+                          <span style={{ color: "red" }}>
+                            Please fill first name
+                          </span>
+                        ) : (
+                          ""
+                        )}
                       </Form.Item>
                       <Form.Item label="Mobile" className="userFormLableCls">
                         <Input
@@ -193,7 +221,15 @@ const UserProfile = () => {
                           onChange={(e) => {
                             setPhone(e.target.value);
                           }}
+                          onKeyUp={()=>{setPhoneErr(false)}}
                         />
+                         {phoneErr ? (
+                          <span style={{ color: "red" }}>
+                            Please fill Phone number
+                          </span>
+                        ) : (
+                          ""
+                        )}
                       </Form.Item>
 
                       <Form.Item label="Gender" className="userFormLableCls">
@@ -203,7 +239,15 @@ const UserProfile = () => {
                           onChange={(e) => {
                             setGender(e.target.value);
                           }}
+                          onKeyUp={()=>{setGenderErr(false)}}
                         />
+                         {genderErr ? (
+                          <span style={{ color: "red" }}>
+                            Please fill gender value
+                          </span>
+                        ) : (
+                          ""
+                        )}
                       </Form.Item>
                     </Form>
                   </Col>
@@ -222,7 +266,15 @@ const UserProfile = () => {
                           onChange={(e) => {
                             setLastName(e.target.value);
                           }}
+                          onKeyUp={()=>{setLNameErr(false)}}
                         />
+                         {lnameErr ? (
+                          <span style={{ color: "red" }}>
+                            Please fill last name
+                          </span>
+                        ) : (
+                          ""
+                        )}
                       </Form.Item>
                       <Form.Item label="Email" className="userFormLableCls">
                         <Input
@@ -231,7 +283,15 @@ const UserProfile = () => {
                           onChange={(e) => {
                             setEmail(e.target.value);
                           }}
+                          onKeyUp={()=>{setEmailErr(false)}}
                         />
+                         {emailErr ? (
+                          <span style={{ color: "red" }}>
+                            Please fill email
+                          </span>
+                        ) : (
+                          ""
+                        )}
                       </Form.Item>
                     </Form>
                   </Col>
