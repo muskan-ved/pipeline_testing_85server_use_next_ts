@@ -10,14 +10,14 @@ const { Meta } = Card;
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };
 
 const rowArray = [
-  { Img:buyHome, title: "parking space" },
-  { Img:rentHome, title: "parking space" },
-  { Img:sellProperty, title: "parking space" },
-  { Img:vouchers, title: "parking space" },
-  { Img:buyHome, title: "parking space" },
-  { Img:sellProperty, title: "parking space" },
-  { Img:rentHome, title: "parking space" },
-  { Img:buyHome, title: "parking space" },
+  { Img: buyHome, title: "parking space" },
+  { Img: rentHome, title: "parking space" },
+  { Img: sellProperty, title: "parking space" },
+  { Img: vouchers, title: "parking space" },
+  { Img: buyHome, title: "parking space" },
+  { Img: sellProperty, title: "parking space" },
+  { Img: rentHome, title: "parking space" },
+  { Img: buyHome, title: "parking space" },
 ];
 
 const Aminities = () => {
@@ -35,7 +35,6 @@ const Aminities = () => {
         Find Properties Based on Aminities you want
       </h1>
 
-
       <Row
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
         style={{
@@ -46,10 +45,10 @@ const Aminities = () => {
         }}
         className="aminitieRowcls1"
       >
-        {rowArray.map((e,i) => {
+        {rowArray.map((e, i) => {
           return (
             <div key={i}>
-            <Space>
+              {/* <Space>
               <Col className="gutter-row  aminitieColCls" span={32}>
                 <Card
                   className="aminitieCardCls"
@@ -75,8 +74,29 @@ const Aminities = () => {
                     <ArrowRightOutlined style={{ color: "black" }} />
                   </Button>
               </Col>
-            </Space>
-                    </div>
+            </Space> */}
+
+              <Space>
+                <Col className="gutter-row  aminitieColCls" span={48}>
+                  <Card
+                    className="aminitieCardCls"
+                    hoverable
+                  >
+                     <Image
+                        className="aminiteImgCls"
+                        alt="example"
+                        src={e.Img.src}
+                        width={100}
+                        height={90}
+                      />
+                    <Meta className="aminitieMetaCls" title={e.title} />
+                  </Card>
+                  <Button shape="circle" className="aminitiBtnCls">
+                    <ArrowRightOutlined style={{ color: "black" }} />
+                  </Button>
+                </Col>
+              </Space>
+            </div>
           );
         })}
       </Row>

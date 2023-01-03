@@ -6,6 +6,11 @@
   height: 70vh;
   padding-top: 13%;
   }
+
+
+  .landLoardHomeWorks .landloardTopContentRow{
+   margin-top: 4%;
+  }
   .landloardMainContent .mainContentBtn{
     transform: translate(-50%, 0%);
       margin-left: 50%;
@@ -17,23 +22,34 @@
       font-weight: bold;
   }
   
-
- .landLoardHomeWorks .landloardTopContentRow  .landloardTopContentCard .ant-card-meta-title{
+.landloardTopContentTitle{
+   text-align: center;
+}
+.landloardTopContentDescription{
+   font-size: 10px;
     text-align: center;
-    font-size: 12px;
- }
+    color: gray;
+}
+.premiumCls .premiumRowCls .premiumCardCls .propertyImgCls{
+   transform: translate(50%,0%);
+}
 
- .landLoardHomeWorks .landloardTopContentRow  .landloardTopContentCard  .ant-card-meta-description{
-    font-size: 10px;
- }
-
- .premiumCls .premiumRowCls .premiumCardCls .premiumImgCls{
+ /* .premiumCls .premiumRowCls .premiumCardCls .premiumImgCls{
     width: 25%;
     transform: translate(50%, 50%);
     margin-left: 50px;
- }
+ } */
 
- .premiumCls .premiumRowCls .premiumCardCls .premiumMetaCls .ant-card-meta-title{
+ .premiumCardTitle{
+   margin-top: 15%;
+   text-align: center;
+}
+.premiumCardDescription{
+   text-align: center;
+   color: gray;
+}
+
+ /* .premiumCls .premiumRowCls .premiumCardCls .premiumMetaCls .ant-card-meta-title{
     margin-bottom: 8px;
     margin-top: 20%;
     font-weight: 800;
@@ -41,4 +57,4 @@
  }
  .premiumCls .premiumRowCls .premiumCardCls .premiumMetaCls .ant-card-meta-description{
     margin-top: 15px;
- }
+ } */

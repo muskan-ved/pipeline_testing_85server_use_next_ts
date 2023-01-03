@@ -1,5 +1,6 @@
 import React from 'react'
 import HomeWorkComp from '../landloard/homeWork'
+import PrimiumTool from '../landloard/premiumTool'
 import RealState from '../welcome/realState'
 import VideoContent from '../welcome/VideoContent'
 import BrokerTopContent from './doorSteps'
@@ -18,7 +19,8 @@ const BrokerageComp = () => {
         <VideoContent/>
     </div>
     <div>
-      <PremiumManagmentTool/>
+      {/* <PremiumManagmentTool/> */}
+      <PrimiumTool/>
     </div>
     <div>
         <RealState/>
